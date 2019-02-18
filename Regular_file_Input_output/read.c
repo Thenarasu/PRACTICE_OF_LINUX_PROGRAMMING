@@ -29,8 +29,8 @@ int main(int argc,char *argv[])
 	file_descriptor = open(argv[1],O_RDONLY,0644);
 	perror("open:");
 
-	/* write a data to an open file  */
-	/* ssize_t write(int fd, void * buffer , size_t count ) */
+	/* read a data to an open file  */
+	/* ssize_t read(int fd, void * buffer , size_t count ) */
 	ret_read = read(file_descriptor,str1,25);
 	perror("read");
 	str1[26] = '\0';
